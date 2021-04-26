@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    platform: MYSQL
+    continue-on-error: false
+    jdbc-url: jdbc:mysql://localhost:3316/store_sample
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+  jpa:
+    properties:
+      hibernate:
+        #若沒有透過java config自定義SessionFactory，就必須加這段
+#        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
