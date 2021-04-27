@@ -21,8 +21,7 @@ import java.util.List;
 @Repository
 @Transactional
 public class CurOrderDaoImpl implements ICurOrderDao {
-//    @PersistenceContext
-//    private EntityManager entityManager;
+
     @Autowired
     SessionFactory sessionFactory;
 
